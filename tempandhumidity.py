@@ -11,7 +11,7 @@ from pythonjsonlogger import jsonlogger
 
 logger = logging.getLogger()
 
-logpath = 'logs/tempandhumidity.log'
+logpath = '/home/pi/logs/tempandhumidity.log'
 
           # change this depending on your sensor type - see header comment
 
@@ -27,9 +27,7 @@ def main():
     logger.addHandler(logHandler)
     logger.setLevel(logging.INFO)
 
-    while True:
-        checktempandhumidity()
-        time.sleep(1)
+    checktempandhumidity()
 
 def checktempandhumidity():
     pin = 7
