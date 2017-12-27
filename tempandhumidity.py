@@ -3,7 +3,6 @@ import grovepi
 import math    
           # change this depending on your sensor type - see header comment
 
-
 def main():
     checktempandhumidity()
 
